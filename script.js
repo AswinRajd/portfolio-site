@@ -7,36 +7,130 @@ function yearsSince(dateStr) {
   return Math.round(years * 10) / 10;
 }
 
-document.querySelectorAll("[data-start]").forEach((el) => {
-  const years = yearsSince(el.dataset.start);
-  el.textContent = el.id === "years-exp" ? `${years}+` : `${years}`;
-});
+function escapeHtml(str) {
+  const div = document.createElement("div");
+  div.textContent = str;
+  return div.innerHTML;
+}
 
-const themeToggle = document.getElementById("theme-toggle");
-const storedTheme = localStorage.getItem("theme");
-const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-const initialTheme = storedTheme || (prefersDark ? "dark" : "light");
-document.documentElement.setAttribute("data-theme", initialTheme);
+function boldMarkdown(str) {
+  return escapeHtml(str).replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+}
 
-themeToggle.addEventListener("click", () => {
-  const next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
-  document.documentElement.setAttribute("data-theme", next);
-  localStorage.setItem("theme", next);
-});
+function renderHero(hero) {
+  const years = yearsSince(hero.experienceStartDate);
+  document.getElementById("hero-content").innerHTML = `
+    <img class="avatar" src="${hero.photo}" alt="${escapeHtml(hero.name)}">
+    <h1>${escapeHtml(hero.name)}</h1>
+    <p class="title">${escapeHtml(hero.title)}</p>
+    <p class="lede">${years}+ ${escapeHtml(hero.ledeSuffix)}</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="mailto:${hero.email}">Email me</a>
+      <a class="btn btn-secondary" href="${hero.linkedin}" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  `;
+  return years;
+}
 
-const revealObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("in-view");
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.15 }
-);
+function renderAbout(about, years) {
+  document.getElementById("about-content").innerHTML = `
+    <img class="about-photo" src="${about.photo}" alt="${escapeHtml(about.photoAlt)}">
+    <p>${escapeHtml(about.textBefore)} ${years} ${escapeHtml(about.textAfter)}</p>
+  `;
+}
 
-document.querySelectorAll(".reveal").forEach((el) => revealObserver.observe(el));
+function renderSkills(skills) {
+  document.getElementById("skills-content").innerHTML = skills.map((group) => `
+    <div class="skill-card">
+      <h3>${escapeHtml(group.title)}</h3>
+      <ul class="tags">
+        ${group.tags.map((tag) => `<li>${escapeHtml(tag)}</li>`).join("")}
+      </ul>
+    </div>
+  `).join("");
+}
+
+function renderExperience(experience) {
+  document.getElementById("experience-content").innerHTML = experience.map((job) => `
+    <div class="timeline-item">
+      <div class="timeline-header">
+        <h3>${escapeHtml(job.role)}</h3>
+        <span class="timeline-meta">${escapeHtml(job.meta)}</span>
+      </div>
+      <ul>
+        ${job.bullets.map((b) => `<li>${escapeHtml(b)}</li>`).join("")}
+      </ul>
+    </div>
+  `).join("");
+}
+
+function renderAchievements(achievements) {
+  document.getElementById("achievements-content").innerHTML = achievements.map((item) => {
+    if (item.type === "stat") {
+      return `
+        <div class="achievement-card highlight">
+          <span class="stat" data-eur="${item.eur}">€${Math.round(item.eur).toLocaleString("en-US")}</span>
+          <span class="stat-inr"></span>
+          <p>${escapeHtml(item.text)}</p>
+        </div>
+      `;
+    }
+    return `
+      <div class="achievement-card">
+        <p>${boldMarkdown(item.text)}</p>
+      </div>
+    `;
+  }).join("");
+}
+
+function renderEducation(education) {
+  document.getElementById("education-content").innerHTML = education.map((item) => `
+    <li>
+      <span class="edu-year">${escapeHtml(item.year)}</span>
+      <span>${escapeHtml(item.text)}</span>
+    </li>
+  `).join("");
+}
+
+function renderContact(contact) {
+  document.getElementById("contact-intro").textContent = contact.intro;
+  document.getElementById("contact-content").innerHTML = `
+    <a class="contact-item" href="mailto:${contact.email}">${escapeHtml(contact.email)}</a>
+    <a class="contact-item" href="tel:${contact.phone.replace(/\s+/g, "")}">${escapeHtml(contact.phone)}</a>
+    <a class="contact-item" href="${contact.linkedin}" target="_blank" rel="noopener">linkedin.com/in/aswin-raj-d</a>
+    <span class="contact-item">${escapeHtml(contact.location)}</span>
+  `;
+}
+
+function setupThemeToggle() {
+  const themeToggle = document.getElementById("theme-toggle");
+  const storedTheme = localStorage.getItem("theme");
+  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  const initialTheme = storedTheme || (prefersDark ? "dark" : "light");
+  document.documentElement.setAttribute("data-theme", initialTheme);
+
+  themeToggle.addEventListener("click", () => {
+    const next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", next);
+    localStorage.setItem("theme", next);
+  });
+}
+
+function setupRevealAnimations() {
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in-view");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.15 }
+  );
+
+  document.querySelectorAll(".reveal").forEach((el) => revealObserver.observe(el));
+}
 
 async function renderInrConversions() {
   const statEls = document.querySelectorAll(".stat[data-eur]");
@@ -73,4 +167,21 @@ async function renderInrConversions() {
   });
 }
 
-renderInrConversions();
+async function init() {
+  const res = await fetch("content/content.json");
+  const data = await res.json();
+
+  const years = renderHero(data.hero);
+  renderAbout(data.about, years);
+  renderSkills(data.skills);
+  renderExperience(data.experience);
+  renderAchievements(data.achievements);
+  renderEducation(data.education);
+  renderContact(data.contact);
+
+  setupThemeToggle();
+  setupRevealAnimations();
+  renderInrConversions();
+}
+
+init();

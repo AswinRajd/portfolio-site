@@ -1,0 +1,116 @@
+{
+  "hero": {
+    "name": "Aswin Raj D",
+    "title": "Senior Software Engineer / Jira Developer",
+    "photo": "images/profile.jpg",
+    "experienceStartDate": "2018-08-01",
+    "ledeSuffix": "years specializing in Java, Groovy scripting, and Jira/Confluence development & administration — building automation, plugins, and dashboards that save real cost and time.",
+    "email": "winraj6464@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/aswin-raj-d-5905b4152/"
+  },
+  "about": {
+    "photo": "images/speaking.jpg",
+    "photoAlt": "Aswin Raj D speaking at Atlassian Community Trivandrum",
+    "textBefore": "A qualified Software Engineer with",
+    "textAfter": "years of experience specializing in Java and Jira Development & Administration. I have a strong understanding of business processes, technical development, and analytical and debugging skills, and I'm always looking to learn new technologies while applying my skills and experience to solve real problems."
+  },
+  "skills": [
+    {
+      "title": "Languages & Scripting",
+      "tags": ["Java", "Python", "Groovy", "Shell Scripting", "JavaScript", "HTML"]
+    },
+    {
+      "title": "Jira & Confluence",
+      "tags": ["Jira Administration", "Jira Development", "Confluence Admin", "Workflows & Schemes", "ScriptRunner", "Jira Upgrades & Migration", "Jira Data Center (AWS)"]
+    },
+    {
+      "title": "Platform & Integration",
+      "tags": ["REST / API Services", "Java Plugin Development", "Custom Dashboards", "Log Analysis & RCA", "Agile / Scrum"]
+    },
+    {
+      "title": "Ways of Working",
+      "tags": ["Cross-timezone Collaboration", "On-call Production Support", "Stakeholder Demos", "Technical Documentation"]
+    }
+  ],
+  "experience": [
+    {
+      "role": "Specialist Application Operations — Jira Developer",
+      "meta": "Allianz · Dec 2022 – Present",
+      "bullets": [
+        "Develop and maintain automation workflows, and build plugins to extend Jira capabilities.",
+        "Build dashboards for Jira Connect add-ons, configure custom fields and preset filters, test outcomes, and identify defects.",
+        "Handle customer demand end-to-end through Groovy scripting.",
+        "Delivered success stories: Project Creation Automation, Archive Issue Search, WoW Panel, CROWD Admin Finder, JMP Self Service Portal."
+      ]
+    },
+    {
+      "role": "Software Engineer",
+      "meta": "UST · Aug 2018 – Dec 2022",
+      "bullets": [
+        "Developed and supported multiple UST client projects, interacting directly with customers.",
+        "Met multiple project objectives with client appreciation.",
+        "Led \"Color Gold\" — an organizational branding initiative — running industrial visits and high-impact events."
+      ]
+    },
+    {
+      "role": "Specialist Application Operations — Jira Admin cum Developer",
+      "meta": "Client: Allianz Technology (Jira & Confluence)",
+      "bullets": [
+        "Handled demand requests that operations couldn't process, by building custom scripts.",
+        "Developed add-ons and customizations for the Atlassian Jira platform.",
+        "Built custom workflows, reports, dashboards, and metrics using Jira APIs for stakeholder insight.",
+        "Maintained plugin compatibility and instance performance stability; produced technical documentation."
+      ]
+    },
+    {
+      "role": "Developer II — Software Engineer",
+      "meta": "Client: Cotiviti R&D",
+      "bullets": [
+        "Built Jira Groovy (ScriptRunner) scripts and custom workflows with conditions, validators, and post-functions.",
+        "Installed, configured, and rolled out key Jira plugins; managed Jira Data Center on AWS.",
+        "Ran demos for end customers and senior management within Agile/Scrum teams."
+      ]
+    },
+    {
+      "role": "Developer I — Software Engineer",
+      "meta": "Client: Anthem – BPD Digitization",
+      "bullets": [
+        "Worked closely with clients to gather requirements and resolve problems.",
+        "Suggested a new digitization methodology and validated BPDs against the digitized versions.",
+        "Developed features and components aligned to the client's business needs."
+      ]
+    },
+    {
+      "role": "Associate Software Developer",
+      "meta": "Client: Anthem – CBS",
+      "bullets": [
+        "Developed custom changes in a mainframe database and maintained existing custom code.",
+        "Tested manual membership claim processing, and combined membership/claim adjudication testing.",
+        "Built macros to automate time-consuming manual processes."
+      ]
+    }
+  ],
+  "achievements": [
+    { "type": "stat", "eur": 95943, "text": "Cost savings from launching the JMP Self Service Portal with innovative search functionality." },
+    { "type": "stat", "eur": 43748.50, "text": "Saved by automating project, space, and group creation in Jira." },
+    { "type": "stat", "eur": 25123.40, "text": "Saved by building an \"Archive Issue Search\" feature for efficient issue retrieval." },
+    { "type": "stat", "eur": 19177.60, "text": "Cost benefit from a release management feature used as a team knowledge base." },
+    { "type": "text", "text": "Recognized as an **Atlassian Community Champion** for Trivandrum." },
+    { "type": "text", "text": "Received the **Navrathna Recognition 2023** and **GEM-Spot Recognition 2023** for exceptional learning and rapid application of new skills." },
+    { "type": "text", "text": "Logged ~395 learning hours, ranking as a top learner on BranchIT 2023." },
+    { "type": "text", "text": "Finalist, Smart India Hackathon (SIH) 2018 — Hubli, Karnataka." },
+    { "type": "text", "text": "Won first prize (Raspberry Pi Kit) in a Raspberry Pi project idea competition, and served as a jury member for the Raspberry Pi Foundation's \"Coolest Projects\" initiative." }
+  ],
+  "education": [
+    { "year": "2018", "text": "B.Tech, Computer Science & Engineering — MGU University, Kottayam, Kerala — 85.0%" },
+    { "year": "2014", "text": "XII — GBHSS Karamana, Trivandrum, Kerala — 77.0%" },
+    { "year": "2012", "text": "X — LMS HSS Chemboor, Trivandrum, Kerala — 75.0%" }
+  ],
+  "contact": {
+    "location": "Trivandrum, Kerala, India",
+    "intro": "Based in Trivandrum, Kerala, India. Open to new opportunities and interesting problems.",
+    "email": "winraj6464@gmail.com",
+    "phone": "+91 7560886464",
+    "linkedin": "https://www.linkedin.com/in/aswin-raj-d-5905b4152/"
+  }
+}

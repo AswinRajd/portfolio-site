@@ -1,0 +1,80 @@
+backend:
+  name: github
+  repo: AswinRajd/portfolio-site
+  branch: main
+
+media_folder: "images"
+public_folder: "images"
+
+collections:
+  - name: "content"
+    label: "Site Content"
+    files:
+      - name: "main"
+        label: "Portfolio Content"
+        file: "content/content.json"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Full Name", name: "name", widget: "string" }
+              - { label: "Job Title", name: "title", widget: "string" }
+              - { label: "Profile Photo", name: "photo", widget: "image" }
+              - { label: "Experience Start Date", name: "experienceStartDate", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false, hint: "Years of experience shown on the site is calculated automatically from this date." }
+              - { label: "Intro Text (after the years number)", name: "ledeSuffix", widget: "text" }
+              - { label: "Email", name: "email", widget: "string" }
+              - { label: "LinkedIn URL", name: "linkedin", widget: "string" }
+
+          - label: "About"
+            name: "about"
+            widget: "object"
+            fields:
+              - { label: "Photo", name: "photo", widget: "image" }
+              - { label: "Photo Alt Text", name: "photoAlt", widget: "string" }
+              - { label: "Text Before Years Number", name: "textBefore", widget: "string" }
+              - { label: "Text After Years Number", name: "textAfter", widget: "text" }
+
+          - label: "Skills"
+            name: "skills"
+            widget: "list"
+            fields:
+              - { label: "Category Title", name: "title", widget: "string" }
+              - { label: "Tags", name: "tags", widget: "list" }
+
+          - label: "Experience"
+            name: "experience"
+            widget: "list"
+            fields:
+              - { label: "Role", name: "role", widget: "string" }
+              - { label: "Meta (Company · Dates)", name: "meta", widget: "string" }
+              - { label: "Bullet Points", name: "bullets", widget: "list" }
+
+          - label: "Achievements"
+            name: "achievements"
+            widget: "list"
+            fields:
+              - label: "Type"
+                name: "type"
+                widget: "select"
+                options: ["stat", "text"]
+                hint: "'stat' shows a highlighted euro figure with live INR conversion. 'text' is a plain achievement."
+              - { label: "Euro Amount (only for 'stat' type)", name: "eur", widget: "number", value_type: "float", required: false }
+              - { label: "Description", name: "text", widget: "text", hint: "Use **double asterisks** for bold text." }
+
+          - label: "Education"
+            name: "education"
+            widget: "list"
+            fields:
+              - { label: "Year", name: "year", widget: "string" }
+              - { label: "Description", name: "text", widget: "string" }
+
+          - label: "Contact"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Location", name: "location", widget: "string" }
+              - { label: "Intro Line", name: "intro", widget: "text" }
+              - { label: "Email", name: "email", widget: "string" }
+              - { label: "Phone", name: "phone", widget: "string" }
+              - { label: "LinkedIn URL", name: "linkedin", widget: "string" }
