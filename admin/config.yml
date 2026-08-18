@@ -2,8 +2,9 @@ backend:
   name: github
   repo: AswinRajd/portfolio-site
   branch: main
-  base_url: https://subtle-kangaroo-2bb3f0.netlify.app
+  base_url: https://api.netlify.com
   auth_endpoint: auth
+  site_domain: subtle-kangaroo-2bb3f0.netlify.app
 
 media_folder: "images"
 public_folder: "images"
