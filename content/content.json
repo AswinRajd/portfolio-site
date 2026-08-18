@@ -34,22 +34,13 @@
   ],
   "experience": [
     {
-      "role": "Specialist Application Operations — Jira Developer",
+      "role": "Senior Software Engineer — Jira Developer",
       "meta": "Allianz · Dec 2022 – Present",
       "bullets": [
         "Develop and maintain automation workflows, and build plugins to extend Jira capabilities.",
         "Build dashboards for Jira Connect add-ons, configure custom fields and preset filters, test outcomes, and identify defects.",
         "Handle customer demand end-to-end through Groovy scripting.",
         "Delivered success stories: Project Creation Automation, Archive Issue Search, WoW Panel, CROWD Admin Finder, JMP Self Service Portal."
-      ]
-    },
-    {
-      "role": "Software Engineer",
-      "meta": "UST · Aug 2018 – Dec 2022",
-      "bullets": [
-        "Developed and supported multiple UST client projects, interacting directly with customers.",
-        "Met multiple project objectives with client appreciation.",
-        "Led \"Color Gold\" — an organizational branding initiative — running industrial visits and high-impact events."
       ]
     },
     {
@@ -63,8 +54,17 @@
       ]
     },
     {
+      "role": "Software Engineer",
+      "meta": "UST · Aug 2018 – Dec 2022",
+      "bullets": [
+        "Developed and supported multiple UST client projects, interacting directly with customers.",
+        "Met multiple project objectives with client appreciation.",
+        "Led \"Color Gold\" — an organizational branding initiative — running industrial visits and high-impact events."
+      ]
+    },
+    {
       "role": "Developer II — Software Engineer",
-      "meta": "Client: Cotiviti R&D",
+      "meta": "UST - Client: Cotiviti R&D",
       "bullets": [
         "Built Jira Groovy (ScriptRunner) scripts and custom workflows with conditions, validators, and post-functions.",
         "Installed, configured, and rolled out key Jira plugins; managed Jira Data Center on AWS.",
@@ -73,7 +73,7 @@
     },
     {
       "role": "Developer I — Software Engineer",
-      "meta": "Client: Anthem – BPD Digitization",
+      "meta": "UST - Client: Anthem – BPD Digitization",
       "bullets": [
         "Worked closely with clients to gather requirements and resolve problems.",
         "Suggested a new digitization methodology and validated BPDs against the digitized versions.",
@@ -82,7 +82,7 @@
     },
     {
       "role": "Associate Software Developer",
-      "meta": "Client: Anthem – CBS",
+      "meta": "UST - Client: Anthem – CBS",
       "bullets": [
         "Developed custom changes in a mainframe database and maintained existing custom code.",
         "Tested manual membership claim processing, and combined membership/claim adjudication testing.",
