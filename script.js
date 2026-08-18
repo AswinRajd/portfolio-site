@@ -1,5 +1,17 @@
 document.getElementById("year").textContent = new Date().getFullYear();
 
+function yearsSince(dateStr) {
+  const start = new Date(dateStr);
+  const now = new Date();
+  const years = (now - start) / (1000 * 60 * 60 * 24 * 365.25);
+  return Math.round(years * 10) / 10;
+}
+
+document.querySelectorAll("[data-start]").forEach((el) => {
+  const years = yearsSince(el.dataset.start);
+  el.textContent = el.id === "years-exp" ? `${years}+` : `${years}`;
+});
+
 const themeToggle = document.getElementById("theme-toggle");
 const storedTheme = localStorage.getItem("theme");
 const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
