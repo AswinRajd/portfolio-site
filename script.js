@@ -167,6 +167,34 @@ async function renderInrConversions() {
   });
 }
 
+function setupActiveNavHighlight() {
+  const navLinks = Array.from(document.querySelectorAll(".nav nav a[href^='#']"));
+  const sections = navLinks
+    .map((link) => document.querySelector(link.getAttribute("href")))
+    .filter(Boolean);
+
+  if (!sections.length) return;
+
+  const setActive = (id) => {
+    navLinks.forEach((link) => {
+      link.classList.toggle("active", link.getAttribute("href") === `#${id}`);
+    });
+  };
+
+  const sectionObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActive(entry.target.id);
+        }
+      });
+    },
+    { rootMargin: "-45% 0px -45% 0px", threshold: 0 }
+  );
+
+  sections.forEach((section) => sectionObserver.observe(section));
+}
+
 async function init() {
   const res = await fetch("content/content.json");
   const data = await res.json();
@@ -181,6 +209,7 @@ async function init() {
 
   setupThemeToggle();
   setupRevealAnimations();
+  setupActiveNavHighlight();
   renderInrConversions();
 }
 
