@@ -44,15 +44,6 @@
       ]
     },
     {
-      "role": "Software Engineer",
-      "meta": "UST · Aug 2018 – Dec 2022",
-      "bullets": [
-        "Developed and supported multiple UST client projects, interacting directly with customers.",
-        "Met multiple project objectives with client appreciation.",
-        "Led \"Color Gold\" — an organizational branding initiative — running industrial visits and high-impact events."
-      ]
-    },
-    {
       "role": "Specialist Application Operations — Jira Admin cum Developer",
       "meta": "Client: Allianz Technology (Jira & Confluence)",
       "bullets": [
@@ -60,6 +51,15 @@
         "Developed add-ons and customizations for the Atlassian Jira platform.",
         "Built custom workflows, reports, dashboards, and metrics using Jira APIs for stakeholder insight.",
         "Maintained plugin compatibility and instance performance stability; produced technical documentation."
+      ]
+    },
+    {
+      "role": "Software Engineer",
+      "meta": "UST · Aug 2018 – Dec 2022",
+      "bullets": [
+        "Developed and supported multiple UST client projects, interacting directly with customers.",
+        "Met multiple project objectives with client appreciation.",
+        "Led \"Color Gold\" — an organizational branding initiative — running industrial visits and high-impact events."
       ]
     },
     {
