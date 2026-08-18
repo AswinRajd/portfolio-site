@@ -102,9 +102,9 @@
     { "type": "text", "text": "Won first prize (Raspberry Pi Kit) in a Raspberry Pi project idea competition, and served as a jury member for the Raspberry Pi Foundation's \"Coolest Projects\" initiative." }
   ],
   "education": [
-    { "year": "2018", "text": "B.Tech, Computer Science & Engineering — MGU University, Kottayam, Kerala — 85.0%" },
-    { "year": "2014", "text": "XII — GBHSS Karamana, Trivandrum, Kerala — 77.0%" },
-    { "year": "2012", "text": "X — LMS HSS Chemboor, Trivandrum, Kerala — 75.0%" }
+    { "year": "2018", "text": "B.Tech, Computer Science & Engineering — MGU University, Kottayam, Kerala" },
+    { "year": "2014", "text": "XII — GBHSS Karamana, Trivandrum, Kerala" },
+    { "year": "2012", "text": "X — LMS HSS Chemboor, Trivandrum, Kerala" }
   ],
   "contact": {
     "location": "Trivandrum, Kerala, India",
