@@ -19,6 +19,9 @@
       <a href="#achievements">Achievements</a>
       <a href="#education">Education</a>
       <a href="#contact">Contact</a>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode">
+        <span class="icon-sun">☀️</span><span class="icon-moon">🌙</span>
+      </button>
     </nav>
   </div>
 </header>
@@ -27,7 +30,7 @@
 
   <section id="top" class="hero">
     <div class="container hero-inner">
-      <div class="avatar" aria-hidden="true">AR</div>
+      <img class="avatar" src="images/profile.jpg" alt="Aswin Raj D">
       <h1>Aswin Raj D</h1>
       <p class="title">Senior Software Engineer / Jira Developer</p>
       <p class="lede">7.6+ years specializing in Java, Groovy scripting, and Jira/Confluence development &amp;
@@ -39,17 +42,20 @@
     </div>
   </section>
 
-  <section id="about" class="section">
+  <section id="about" class="section reveal">
     <div class="container">
       <h2>About</h2>
-      <p>A qualified Software Engineer with 7.6 years of experience specializing in Java and Jira Development
-        &amp; Administration. I have a strong understanding of business processes, technical development, and
-        analytical and debugging skills, and I'm always looking to learn new technologies while applying my
-        skills and experience to solve real problems.</p>
+      <div class="about-inner">
+        <img class="about-photo" src="images/speaking.jpg" alt="Aswin Raj D speaking at Atlassian Community Trivandrum">
+        <p>A qualified Software Engineer with 7.6 years of experience specializing in Java and Jira Development
+          &amp; Administration. I have a strong understanding of business processes, technical development, and
+          analytical and debugging skills, and I'm always looking to learn new technologies while applying my
+          skills and experience to solve real problems.</p>
+      </div>
     </div>
   </section>
 
-  <section id="skills" class="section alt">
+  <section id="skills" class="section alt reveal">
     <div class="container">
       <h2>Skills</h2>
       <div class="skills-grid">
@@ -85,7 +91,7 @@
     </div>
   </section>
 
-  <section id="experience" class="section">
+  <section id="experience" class="section reveal">
     <div class="container">
       <h2>Experience</h2>
       <div class="timeline">
@@ -172,24 +178,28 @@
     </div>
   </section>
 
-  <section id="achievements" class="section alt">
+  <section id="achievements" class="section alt reveal">
     <div class="container">
       <h2>Achievements</h2>
       <div class="achievements-grid">
         <div class="achievement-card highlight">
-          <span class="stat">€95,943</span>
+          <span class="stat" data-eur="95943">€95,943</span>
+          <span class="stat-inr"></span>
           <p>Cost savings from launching the JMP Self Service Portal with innovative search functionality.</p>
         </div>
         <div class="achievement-card highlight">
-          <span class="stat">€43,748</span>
+          <span class="stat" data-eur="43748.50">€43,748</span>
+          <span class="stat-inr"></span>
           <p>Saved by automating project, space, and group creation in Jira.</p>
         </div>
         <div class="achievement-card highlight">
-          <span class="stat">€25,123</span>
+          <span class="stat" data-eur="25123.40">€25,123</span>
+          <span class="stat-inr"></span>
           <p>Saved by building an "Archive Issue Search" feature for efficient issue retrieval.</p>
         </div>
         <div class="achievement-card highlight">
-          <span class="stat">€19,178</span>
+          <span class="stat" data-eur="19177.60">€19,178</span>
+          <span class="stat-inr"></span>
           <p>Cost benefit from a release management feature used as a team knowledge base.</p>
         </div>
         <div class="achievement-card">
@@ -213,7 +223,7 @@
     </div>
   </section>
 
-  <section id="education" class="section">
+  <section id="education" class="section reveal">
     <div class="container">
       <h2>Education</h2>
       <ul class="education-list">
@@ -233,7 +243,7 @@
     </div>
   </section>
 
-  <section id="contact" class="section alt">
+  <section id="contact" class="section alt reveal">
     <div class="container">
       <h2>Contact</h2>
       <p>Based in Trivandrum, Kerala, India. Open to new opportunities and interesting problems.</p>
