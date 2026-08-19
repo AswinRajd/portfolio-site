@@ -14,11 +14,19 @@
     "textBefore": "I'm a Java developer with",
     "textAfter": "years of experience, and I've spent much of that time focused on Jira development, building the automations, plugins, and dashboards that take a clunky manual process and make it just work. I like getting to the bottom of why a workflow is broken before I fix it, and I'm always chasing the next tool or technique worth learning. I'm also an Atlassian Community Champion for the Trivandrum chapter, where I've helped run a string of successful meetups and events."
   },
+  "techStack": [
+    { "name": "Java", "icon": "images/icons/java.svg" },
+    { "name": "Python", "icon": "images/icons/python.svg" },
+    { "name": "Groovy", "icon": "images/icons/groovy.svg" },
+    { "name": "JavaScript", "icon": "images/icons/javascript.svg" },
+    { "name": "HTML5", "icon": "images/icons/html5.svg" },
+    { "name": "Git", "icon": "images/icons/git.svg" },
+    { "name": "Jira", "icon": "images/icons/jira.svg" },
+    { "name": "Confluence", "icon": "images/icons/confluence.svg" },
+    { "name": "AWS", "icon": "images/icons/aws.svg" },
+    { "name": "Azure", "icon": "images/icons/azure.svg" }
+  ],
   "skills": [
-    {
-      "title": "Languages & Scripting",
-      "tags": ["Java", "Python", "Groovy", "Shell Scripting", "JavaScript", "HTML"]
-    },
     {
       "title": "Jira & Confluence",
       "tags": ["Jira Administration", "Jira Development", "Confluence Admin", "Workflows & Schemes", "ScriptRunner", "Jira Upgrades & Migration", "Jira Data Center (AWS)"]

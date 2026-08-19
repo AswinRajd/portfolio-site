@@ -39,6 +39,15 @@ function renderAbout(about, years) {
   `;
 }
 
+function renderTechStack(techStack) {
+  document.getElementById("tech-stack-content").innerHTML = techStack.map((item) => `
+    <div class="tech-icon" title="${escapeHtml(item.name)}">
+      <img src="${item.icon}" alt="${escapeHtml(item.name)}" loading="lazy">
+      <span>${escapeHtml(item.name)}</span>
+    </div>
+  `).join("");
+}
+
 function renderSkills(skills) {
   document.getElementById("skills-content").innerHTML = skills.map((group) => `
     <div class="skill-card">
@@ -246,6 +255,7 @@ async function init() {
 
   const years = renderHero(data.hero);
   renderAbout(data.about, years);
+  renderTechStack(data.techStack);
   renderSkills(data.skills);
   renderExperience(data.experience);
   renderAchievements(data.achievements);
