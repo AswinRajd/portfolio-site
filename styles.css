@@ -366,6 +366,116 @@ h1, h2, h3 { line-height: 1.25; }
   margin-bottom: 6px;
 }
 
+/* Milestones */
+.milestones-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 14px;
+  grid-auto-flow: dense;
+}
+
+.milestone-tile {
+  display: block;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 14px;
+  text-decoration: none;
+  color: inherit;
+  cursor: default;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  opacity: 0;
+  transform: translateY(16px) scale(0.98);
+}
+
+a.milestone-tile {
+  cursor: pointer;
+}
+
+.milestone-tile.in-view {
+  animation: milestone-in 0.5s ease forwards;
+}
+
+.milestone-tile:hover {
+  transform: translateY(-4px);
+  border-color: var(--primary);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.1);
+}
+
+.milestone-tile.featured {
+  grid-column: span 2;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.milestone-tile.featured img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.milestone-tile.featured:hover img {
+  transform: scale(1.06);
+}
+
+.milestone-tile.featured .milestone-tile-body {
+  padding: 12px 14px;
+}
+
+.milestone-date {
+  display: inline-block;
+  font-weight: 700;
+  color: var(--primary);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 6px;
+}
+
+.milestone-tile p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+@keyframes milestone-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .milestone-tile {
+    opacity: 1;
+    transform: none;
+  }
+  .milestone-tile.featured:hover img {
+    transform: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .milestones-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .milestone-tile.featured {
+    grid-column: span 2;
+  }
+  .milestone-tile.featured img {
+    height: 150px;
+  }
+}
+
 /* Education */
 .education-list {
   list-style: none;

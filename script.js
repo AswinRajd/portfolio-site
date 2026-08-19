@@ -83,6 +83,31 @@ function renderAchievements(achievements) {
   }).join("");
 }
 
+function renderMilestones(milestones) {
+  document.getElementById("milestones-content").innerHTML = milestones.map((item) => {
+    const tag = item.link ? "a" : "div";
+    const linkAttrs = item.link ? `href="${item.link}" target="_blank" rel="noopener"` : "";
+
+    if (item.image) {
+      return `
+        <${tag} class="milestone-tile featured" ${linkAttrs}>
+          <img src="${item.image}" alt="${escapeHtml(item.text)}">
+          <div class="milestone-tile-body">
+            <span class="milestone-date">${escapeHtml(item.date)}</span>
+            <p>${boldMarkdown(item.text)}</p>
+          </div>
+        </${tag}>
+      `;
+    }
+    return `
+      <${tag} class="milestone-tile" ${linkAttrs}>
+        <span class="milestone-date">${escapeHtml(item.date)}</span>
+        <p>${boldMarkdown(item.text)}</p>
+      </${tag}>
+    `;
+  }).join("");
+}
+
 function renderEducation(education) {
   document.getElementById("education-content").innerHTML = education.map((item) => `
     <li>
@@ -195,6 +220,26 @@ function setupActiveNavHighlight() {
   sections.forEach((section) => sectionObserver.observe(section));
 }
 
+function setupMilestoneAnimations() {
+  const tiles = document.querySelectorAll(".milestone-tile");
+  if (!tiles.length) return;
+
+  const tileObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.style.animationDelay = `${Array.from(tiles).indexOf(entry.target) % 6 * 0.06}s`;
+          entry.target.classList.add("in-view");
+          tileObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.15 }
+  );
+
+  tiles.forEach((tile) => tileObserver.observe(tile));
+}
+
 async function init() {
   const res = await fetch("content/content.json");
   const data = await res.json();
@@ -204,12 +249,14 @@ async function init() {
   renderSkills(data.skills);
   renderExperience(data.experience);
   renderAchievements(data.achievements);
+  renderMilestones(data.milestones);
   renderEducation(data.education);
   renderContact(data.contact);
 
   setupThemeToggle();
   setupRevealAnimations();
   setupActiveNavHighlight();
+  setupMilestoneAnimations();
   renderInrConversions();
 }
 

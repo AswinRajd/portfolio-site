@@ -44,7 +44,7 @@
       ]
     },
     {
-      "role": "Specialist Application Operations — Jira Admin cum Developer",
+      "role": "Specialist Application Operations — Jira Developer & Administrator",
       "meta": "Client: Allianz Technology (Jira & Confluence)",
       "bullets": [
         "Stepped in wherever standard operations hit a wall, writing the custom scripts that got requests unstuck.",
@@ -100,6 +100,21 @@
     { "type": "text", "text": "Clocked ~395 learning hours, ranking as top learner on BranchIT 2023." },
     { "type": "text", "text": "Finalist at Smart India Hackathon (SIH) 2018 in Hubli, Karnataka." },
     { "type": "text", "text": "Took first prize in a Raspberry Pi project competition, and later judged projects myself as a jury member for the Raspberry Pi Foundation's \"Coolest Projects\" initiative." }
+  ],
+  "milestones": [
+    { "date": "Aug 2026", "text": "Completed the **Develop AI Apps and Agents on Azure** certification, sharpening my grip on Azure AI services and agent-based app development.", "image": "images/certification.jpg", "link": "https://www.linkedin.com/feed/update/urn:li:activity:7494976368431034368/" },
+    { "date": "2026", "text": "Hosted **Connect & Learn: Introduction to Atlassian Tools**, an Atlassian Community Trivandrum session that drew 100+ participants.", "image": "images/milestone-connect-learn.jpg", "link": "https://www.linkedin.com/feed/update/urn:li:activity:7490294937716957185/" },
+    { "date": "2026", "text": "Helped the Atlassian Community Trivandrum chapter launch its **Adopt a Charity** fundraising initiative.", "image": "images/milestone-adopt-a-charity.jpg", "link": "https://www.linkedin.com/feed/update/urn:li:activity:7464898850881699840/" },
+    { "date": "Jan 2026", "text": "Hosted the **Atlassian Community Trivandrum Year Kick Start Meetup 2026**, running a Scrum Simulation for 100+ participants.", "image": "images/milestone-kickstart-2026.jpg", "link": "https://www.linkedin.com/feed/update/urn:li:activity:7424300358363148288/" },
+    { "date": "2025", "text": "Joined the **Atlassian Champion Regional Connect India** meetup, an exclusive gathering of Community Champions from across the country.", "image": "images/milestone-regional-connect-india.jpg", "link": "https://www.linkedin.com/feed/update/urn:li:activity:7401098574517673984/" },
+    { "date": "Nov 2025", "text": "Passed the **ACA-915: Atlassian Cloud Foundation** certification.", "image": "images/milestone-aca-915.jpg", "link": "https://www.linkedin.com/feed/update/urn:li:activity:7397244216835325952/" },
+    { "date": "Oct 2025", "text": "Hosted **Your Productivity Power Duo: AI and Atlassian** with Isha Ganeriwal from Atlassian, for 70+ attendees.", "image": "images/milestone-productivity-power-duo.jpg", "link": "https://www.linkedin.com/feed/update/urn:li:activity:7388837810012631040/" },
+    { "date": "2025", "text": "Ran a hands-on **Atlassian Loom** session for the Trivandrum community, with attendees recording and sharing their first Loom videos live.", "image": "images/milestone-atlassian-loom.jpg", "link": "https://www.linkedin.com/feed/update/urn:li:activity:7379351941832777728/" },
+    { "date": "2025", "text": "Hosted **33 km and Beyond: The Power of OKRs in Action** with speaker Cipson Thomas, for 54 attendees.", "image": "images/milestone-33km-okrs.jpg", "link": "https://www.linkedin.com/feed/update/urn:li:activity:7353708724911235074/" },
+    { "date": "2025", "text": "Hosted **Confluence Unlocked: Smarter Collaboration Starts Here** with speaker Deepthi Aynumpudi.", "image": "images/milestone-confluence-unlocked.jpg", "link": "https://www.linkedin.com/feed/update/urn:li:activity:7335542384765640706/" },
+    { "date": "Mar 2025", "text": "Led an Atlassian Community Trivandrum event that brought together 30 participants from multiple organizations.", "image": "images/milestone-march-2025-event.jpg", "link": "https://www.linkedin.com/feed/update/urn:li:activity:7307641568973209600/" },
+    { "date": "Nov 2024", "text": "Represented the Trivandrum chapter at **Atlassian Leaders Connect**, covering AI, Rovo, and the future of teamwork.", "image": "images/milestone-leaders-connect.jpg", "link": "https://www.linkedin.com/feed/update/urn:li:activity:7269945451187949568/" },
+    { "date": "Jul 2024", "text": "Attended **Atlassian Developer Day on Tour** in Bengaluru, a full-day deep dive into building with Forge.", "image": "images/milestone-developer-day-bengaluru.jpg", "link": "https://www.linkedin.com/feed/update/urn:li:activity:7221370470678302720/" }
   ],
   "education": [
     { "year": "2018", "text": "B.Tech, Computer Science & Engineering — MGU University, Kottayam, Kerala" },
